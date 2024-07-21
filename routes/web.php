@@ -3,11 +3,34 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
+// RUTAS DE LAS PÁGINAS PRINCIPALES DEL CLIENTE (no debería tener cuenta)
+
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Inicio', function () {
+    return view('/pagClients/Inicio');
+});
+
+Route::get('/Servicios', function () {
+    return view('/pagClients/Servicios');
+});
+
+Route::get('/Tienda', function () {
+    return view('/pagClients/Tienda');
+});
+
+Route::get('/AcercaDeNosotros', function () {
+    return view('/pagClients/AcercaDeNosotros');
+});
 
 
+
+
+
+
+// INICIO DE SESION, REGISTRO Y ROLES DE USUARIO HECHOS EN LARAVEL BREEZE
 
 Route::get('/dashboard', function () {
     return view('dashboard');
