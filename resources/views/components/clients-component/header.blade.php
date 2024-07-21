@@ -1,11 +1,11 @@
-<header class="p-3 text-bg-dark">
+<header class="text-bg-dark">
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">
 
         {{-- INFORMACIÓN DEL DUEÑO DE ELECTRIC Y LOGO --}}
-        <div class="col-1">
-            <div class="row"> 
-                Correo  Numero
+        <div class="col-2">
+            <div class="row font-monospace">  {{-- TIPO DE LETRA MONOSPACE --}}
+                <h5 class="small">17610575@utgz.edu.mx | 7841071694</h5>                
             </div>
             <div class="row">
                 <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -16,16 +16,13 @@
 
         {{-- RUTEO ENTRE PÁGINAS DE VISTA CLIENTE --}}
         
-        <div class="col-8">
-            <div class="row ms-3">
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/Inicio" class="nav-link px-2 text-secondary">Inicio</a></li>
-                    <li><a href="/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
-                    <li><a href="/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
-                    <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
-                </ul>
-            </div>
-            <div class="row"></div>        
+        <div class="col-7">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="nav-link px-2 text-white">Inicio</a></li>
+                <li><a href="/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
+                <li><a href="/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
+                <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
+            </ul>      
         </div>
 
         {{-- FALTA REALIZAR EL INICIO DE SESION CON BREEZE --}}
@@ -55,4 +52,4 @@
         </div>  
       </div>
     </div>
-  </header>
+</header>

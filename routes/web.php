@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 // RUTAS DE LAS PÁGINAS PRINCIPALES DEL CLIENTE (no debería tener cuenta)
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/Inicio', function () {
+}); */
+Route::get('/', function () {
     return view('/pagClients/Inicio');
 });
 

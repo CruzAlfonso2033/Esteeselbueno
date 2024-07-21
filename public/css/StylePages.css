@@ -1,3 +1,22 @@
-.body{
+#body{
     background-color: black;
+}
+
+.small {
+	font-size: x-small;
+}   
+
+#opacidad {
+    background: #10e7ff;
+    opacity: .5;
+
+    box-shadow: -15px 3px 10px rgba(255, 255, 255, 0.368);
+}
+
+#sombras {
+    box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.368);
+}
+
+#sombrasizquierda {
+    box-shadow: -15px 3px 10px rgba(255, 255, 255, 0.368);
 }
