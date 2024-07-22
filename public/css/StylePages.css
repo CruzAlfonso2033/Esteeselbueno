@@ -20,3 +20,9 @@
 #sombrasizquierda {
     box-shadow: -15px 3px 10px rgba(255, 255, 255, 0.368);
 }
+
+#redondo{
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+}
