@@ -3,12 +3,55 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-
-// RUTAS DE LAS PÁGINAS PRINCIPALES DEL CLIENTE (no debería tener cuenta)
-
-/* Route::get('/', function () {
+/* Route::get('/welcome', function () {
     return view('welcome');
 }); */
+
+
+
+// RUTAS DE LAS PÁGINAS DEL ADMIN (solo puede entrar un usuario tipo administrador)
+
+Route::get('/admin/inicio', function () {
+    return view('/admin/Inicio');
+});
+
+Route::get('/admin/Servicios', function () {
+    return view('/admin/Servicios');
+});
+
+Route::get('/admin/Tienda', function () {
+    return view('/admin/Tienda');
+});
+
+Route::get('/admin/AcercaDeNosotros', function () {
+    return view('/admin/AcercaDeNosotros');
+});
+
+
+
+// RUTAS DE LAS PÁGINAS DE LOS EMPLEADOS (solo puede entrar los usuarios de tipo empleado)
+
+Route::get('/pagEmpleados/inicio', function () {
+    return view('/pagEmpleados/Inicio');
+});
+
+Route::get('/pagEmpleados/Servicios', function () {
+    return view('/pagEmpleados/Servicios');
+});
+
+Route::get('/pagEmpleados/Tienda', function () {
+    return view('/pagEmpleados/Tienda');
+});
+
+Route::get('/pagEmpleados/AcercaDeNosotros', function () {
+    return view('/pagEmpleados/AcercaDeNosotros');
+});
+
+
+
+
+// RUTAS DE LAS PÁGINAS DEL CLIENTE (no debería tener cuenta)
+
 Route::get('/', function () {
     return view('/pagClients/Inicio');
 });
@@ -28,8 +71,6 @@ Route::get('/AcercaDeNosotros', function () {
 
 
 
-
-
 // INICIO DE SESION, REGISTRO Y ROLES DE USUARIO HECHOS EN LARAVEL BREEZE
 
 Route::get('/dashboard', function () {
@@ -37,7 +78,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/admin', function () {
-    return view('admin.index');
+    return view('admin.Inicio');
 })->middleware(['auth', 'verified','role:admin'])->name('admin.index');
 
 Route::middleware('auth')->group(function () {
