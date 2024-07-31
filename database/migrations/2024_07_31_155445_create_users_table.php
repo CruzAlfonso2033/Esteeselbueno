@@ -24,10 +24,10 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             
+          
             $table->foreignId('id_direccion');
 
-            $table->foreign('id_rol')->references('id')->on('rol')
-            ->onDelete('cascade')->onUpdate('cascade');
+
 
             $table->foreign('id_direccion')->references('id')->on('direccion')
             ->onDelete('cascade')->onUpdate('cascade');
