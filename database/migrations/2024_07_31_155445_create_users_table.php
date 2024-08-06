@@ -24,7 +24,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             
-            $table->foreignId('id_direccion');
+           // $table->foreignId('id_direccion');
 
             $table->foreign('id_rol')->references('id')->on('rol')
             ->onDelete('cascade')->onUpdate('cascade');
