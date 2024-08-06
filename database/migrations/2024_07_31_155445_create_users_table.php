@@ -25,12 +25,12 @@ return new class extends Migration
             $table->timestamps();
             
           
-            $table->foreignId('id_direccion');
+            // $table->foreignId('id_direccion');
 
 
 
-            $table->foreign('id_direccion')->references('id')->on('direccion')
-            ->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreign('id_direccion')->references('id')->on('direccion')
+            // ->onDelete('cascade')->onUpdate('cascade');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
