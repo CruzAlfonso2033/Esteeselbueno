@@ -22,7 +22,7 @@
                 <li><a href="/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
                 <li><a href="/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
                 <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
-                <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">Servicios2</a></li>
+                <li><a href="/AcercaDeNosotros" class="nav-link px-2 text-white">Informes</a></li>
             </ul>      
         </div>
 
