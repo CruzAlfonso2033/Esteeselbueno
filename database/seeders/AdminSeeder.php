@@ -22,13 +22,18 @@ class AdminSeeder extends Seeder
         $user = User::create([
             'name' => 'admin',
             'email' => 'prueba@gmail.com',
-            'apellido' => 'Doroteo',
-            'edad' => '20',
-            'RFC' => 'DORP2000',
-            'Sueldo' => '2000',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             ]);
             $user->assignRole('admin');
+
+
+            $user = User::create([
+                'name' => 'empleado',
+                'email' => 'empleado@gmail.com',
+                'email_verified_at' => now(),
+                'password' => static::$password ??= Hash::make('contraseña'),
+                ]);
+                $user->assignRole('employee');  
     }
 }

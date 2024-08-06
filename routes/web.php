@@ -5,49 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/profile/edit', function () {
+    return view('edit');
 });
-
-
-
-// RUTAS DE LAS PÁGINAS DEL ADMIN (solo puede entrar un usuario tipo administrador)
-
-/* Route::get('/admin/inicio', function () {
-    return view('/admin/Inicio');
-});
-
-Route::get('/admin/Servicios', function () {
-    return view('/admin/Servicios');
-});
-
-Route::get('/admin/Tienda', function () {
-    return view('/admin/Tienda');
-});
-
-Route::get('/admin/AcercaDeNosotros', function () {
-    return view('/admin/AcercaDeNosotros');
-});
- */
-
-
-// RUTAS DE LAS PÁGINAS DE LOS EMPLEADOS (solo puede entrar los usuarios de tipo empleado)
-
-/* Route::get('/pagEmpleados/inicio', function () {
-    return view('/pagEmpleados/Inicio');
-});
-
-Route::get('/pagEmpleados/Servicios', function () {
-    return view('/pagEmpleados/Servicios');
-});
-
-Route::get('/pagEmpleados/Tienda', function () {
-    return view('/pagEmpleados/Tienda');
-});
-
-Route::get('/pagEmpleados/AcercaDeNosotros', function () {
-    return view('/pagEmpleados/AcercaDeNosotros');
-});
- */
-
 
 
 // RUTAS DE LAS PÁGINAS DEL CLIENTE (no debería tener cuenta)
@@ -96,6 +59,10 @@ Route::get('/pagEmpleados/AcercaDeNosotros', function () {
 
 
 // ADMIN
+Route::get('index', function () {
+    return view('admin.index');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.index');
+
 Route::get('/admin/Inicio', function () {
     return view('admin.Inicio');
 })->middleware(['auth', 'verified','role:admin'])->name('admin.inicio');

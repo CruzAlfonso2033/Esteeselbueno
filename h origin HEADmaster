@@ -1,0 +1,110 @@
+[33mcommit 2ffd0dc5075350f71d84de1b0ed304e37e9caf62[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 4d8e117 179f495
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Tue Aug 6 11:58:30 2024 -0600
+
+    Merge branch 'master' of https://github.com/CruzAlfonso2033/electric into HEAD
+
+[33mcommit 4d8e117462cac4b295a38e2c3b737fbe789d2017[m[33m ([m[1;32mjehu[m[33m)[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Tue Aug 6 11:14:28 2024 -0600
+
+    Aqui empiezamos
+
+[33mcommit 179f495d506865cea0807811149b1e8b9ed7c079[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: edbab63 bf12241
+Author: Cruzetas <20610183@utgz.edu.mx>
+Date:   Tue Aug 6 10:10:03 2024 -0600
+
+    Esto es un commit
+
+[33mcommit bf122416532a444f05452438bd54a51a0616367c[m[33m ([m[1;31morigin/paginas[m[33m)[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Tue Aug 6 10:02:13 2024 -0600
+
+    avance
+
+[33mcommit edbab6375f0796bc437d5135077f764d68c63869[m
+Author: Cruzetas <20610183@utgz.edu.mx>
+Date:   Tue Aug 6 00:39:52 2024 -0600
+
+    Merge branch 'master' of https://github.com/CruzAlfonso2033/electric
+
+[33mcommit 3e8645fe88c98566a7f5964b544ef9a19bdabb63[m
+Merge: 8b15aa3 3139aed
+Author: Cruzetas <20610183@utgz.edu.mx>
+Date:   Tue Aug 6 00:39:32 2024 -0600
+
+    Merge branch 'master' of https://github.com/CruzAlfonso2033/electric
+
+[33mcommit 8b15aa3736772f7c364bc03a64b33191e55b2fd5[m
+Author: Cruzetas <20610183@utgz.edu.mx>
+Date:   Tue Aug 6 00:26:32 2024 -0600
+
+    Culo
+
+[33mcommit 583cbe1d33fcbddc588879a6934d202f7d74b0b1[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Wed Jul 31 10:47:26 2024 -0600
+
+    Muñeño
+
+[33mcommit 3139aed0bfa1b89e583b6fe64417c062f075bbf2[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Wed Jul 31 10:47:26 2024 -0600
+
+    tablas de electric-cool listas
+
+[33mcommit 69c336e92f510aa2a448ee313fcf335a599c4d2b[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Wed Jul 31 10:18:28 2024 -0600
+
+    Tablas tienda y usuarios listo
+
+[33mcommit 4214248ad1b91f7c3ac6e31c909eebf970cfda37[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Wed Jul 31 00:37:03 2024 -0600
+
+    Páginas de inicio realizadas de Clientes, Empleados y admin, Siguien las migraciones de la bd
+
+[33mcommit 1a2c3d9643fd693389474e482c32b0964732adad[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Mon Jul 22 09:26:54 2024 -0600
+
+    listo2
+
+[33mcommit 31b415523b73e09c006b96b0e2e4583bd1e8da34[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Mon Jul 22 07:45:59 2024 -0600
+
+    Avance
+
+[33mcommit ea1a3a6c970f7b017cc36adf5c88cc759709ae3e[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Sun Jul 21 03:39:19 2024 -0600
+
+    Mimi
+
+[33mcommit fc88f4308ccdbc3eba18d6b4bb45a7cddbaf6b9a[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Sun Jul 21 00:32:57 2024 -0600
+
+    Aquí empieza mi desmadre
+
+[33mcommit 98b89650ccf3be31d664d1d029b5a645dae7aaee[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Sat Jul 20 23:46:28 2024 -0600
+
+    Entorno configurado listo para iniciar
+
+[33mcommit e8a4d50c9157d21e53a970d5b1011f082753e9b5[m
+Author: JehuReyna <162845212+JehuReyna@users.noreply.github.com>
+Date:   Sat Jul 20 23:29:06 2024 -0600
+
+    Primer Actualización
+
+[33mcommit ccc690b819f8544d531c77f6ed347dbe5d6cc979[m[33m ([m[1;31morigin/Páginas[m[33m)[m
+Author: Cruzetas <20610183@utgz.edu.mx>
+Date:   Mon Jul 15 18:27:04 2024 -0600
+
+    Esqueleto
