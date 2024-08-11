@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('foto', 100)->nullable();
             $table->string('descripcion', 150)->nullable();
             $table->decimal('precio', 6, 2)->nullable();
-
             $table->foreignId('id_tipo_servicio');
             $table->foreignId('id_status');
             $table->foreignId('id_gastos_servicio');

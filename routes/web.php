@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -65,7 +66,7 @@ Route::get('index', function () {
 
 Route::get('/admin/Inicio', function () {
     return view('admin.Inicio');
-})->middleware(['auth', 'verified','role:admin'])->name('admin.inicio');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.Inicio');
 
 Route::get('/admin/Servicios', function () {
     return view('admin.Servicios');
@@ -79,6 +80,31 @@ Route::get('/admin/AcercaDeNosotros', function () {
     return view('admin.AcercaDeNosotros');
 })->middleware(['auth', 'verified','role:admin'])->name('admin.acercadenosotros');
 
+Route::get('/admin/CostosFijos', function () {
+    return view('admin.CostosFijos');
+})->middleware(['auth', 'verified','role:admin'])->name('admin.CostosFijos');
+
+// Route::get('/admin/Servicios/create', function () {
+//     return view('admin.Servicios.create');
+// }, [ProductController::class,'create'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.create');
+
+Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
+    ->middleware(['auth', 'verified','role:admin'])
+    ->name('admin.Servicios.create');
+
+// Route::post('/admin/Servicios', [ProductController::class,'store'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.store');
+
+Route::post('/admin/Servicios', [ProductController::class, 'store'])
+    ->middleware(['auth', 'verified','role:admin'])
+    ->name('admin.Servicios.store');
+
+// Route::post('/admin/Servicios', function () {
+//     return view('admin.Servicios.create');
+// }, [ProductController::class,'index'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.index');
+
+// Route::post('/admin/Servicios', function () {
+//     return view('admin.Servicios.create');
+// }, [ProductController::class,'store'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.store');
 
 
 // AUTENTICACIÓN
