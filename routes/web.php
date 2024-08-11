@@ -64,13 +64,20 @@ Route::get('index', function () {
     return view('admin.index');
 })->middleware(['auth', 'verified','role:admin'])->name('admin.index');
 
+
 Route::get('/admin/Inicio', function () {
     return view('admin.Inicio');
 })->middleware(['auth', 'verified','role:admin'])->name('admin.Inicio');
 
-Route::get('/admin/Servicios', function () {
-    return view('admin.Servicios');
-})->middleware(['auth', 'verified','role:admin'])->name('admin.servicios');
+// Route::get('/admin/Servicios', function () {
+//     return view('admin.Servicios');
+// })->middleware(['auth', 'verified','role:admin'])->name('admin.servicios');
+
+Route::get('/admin/Servicios', [ProductController::class, 'index'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.servicios.index');
+
+
 
 Route::get('/admin/Tienda', function () {
     return view('admin.Tienda');
@@ -97,6 +104,18 @@ Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
 Route::post('/admin/Servicios', [ProductController::class, 'store'])
     ->middleware(['auth', 'verified','role:admin'])
     ->name('admin.Servicios.store');
+
+    Route::get('/admin/Servicios/{product}/edit', [ProductController::class, 'edit'])
+    ->middleware(['auth', 'verified','role:admin'])
+    ->name('admin.Servicios.edit');
+
+    Route::put('/admin/Servicios/{product}', [ProductController::class, 'update'])
+    ->middleware(['auth', 'verified','role:admin'])
+    ->name('admin.Servicios.update');
+
+    Route::delete('/admin/Servicios/{product}', [ProductController::class, 'destroy'])
+    ->middleware(['auth', 'verified','role:admin'])
+    ->name('admin.Servicios.destroy');
 
 // Route::post('/admin/Servicios', function () {
 //     return view('admin.Servicios.create');
