@@ -19,9 +19,10 @@
             
             <div class="col-7">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/Vistas/Inicio" class="nav-link px-2 text-white">Inicio</a></li>
+                    <li><a href="/" class="nav-link px-2 text-white">Inicio</a></li>
                     <li><a href="/Vistas/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
                     <li><a href="/Vistas/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
+                    <li><a href="/Vistas/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
                     <li><a href="/Vistas/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
     
                     @role('admin')
@@ -30,7 +31,7 @@
                     @endrole
     
                     @role('employee')
-                        <li><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
+                        <li><a href="/Vistas/Herramientas" class="nav-link px-2 text-white">Herramientas</a></li>
                     @endrole
                 </ul>      
             </div>

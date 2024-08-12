@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CostController;
+use App\Http\Controllers\HerramientaController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -32,26 +33,29 @@ Route::get('/Vistas/AcercaDeNosotros', function () {
     return view('Vistas.AcercaDeNosotros');
 });
 
-
+/* CRUDS */
 
 Route::get('/Vistas/Informes', [ProductController::class, 'index'])
 ->middleware(['auth', 'verified', 'role:admin'])
 ->name('Vistas.index');
-/*     
+
+Route::get('/Vistas/Herramientas', [HerramientaController::class, 'index'])
+->middleware(['auth', 'verified', 'role:employee'])
+->name('Herramientas.index');
+
 Route::get('/admin/costs', [CostController::class, 'index'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.index'); */
+->middleware(['auth', 'verified', 'role:admin'])
+->name('admin.costs.index');
 
-// INICIO DE SESION, REGISTRO Y ROLES DE USUARIO HECHOS EN LARAVEL BREEZE
-// ADMIN
 
-Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
-    ->middleware(['auth', 'verified','role:admin'])
-    ->name('admin.Servicios.create');
+
 
 
 /* SERVICIOS CONTROLADOR */
 
+    Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
+    ->middleware(['auth', 'verified','role:admin'])
+    ->name('admin.Servicios.create');
 
     Route::post('/admin/Servicios.store', [ProductController::class, 'store'])
     ->middleware(['auth', 'verified','role:admin'])
@@ -71,29 +75,48 @@ Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
 
 /* Costs */
 
-Route::get('/admin/costs', [CostController::class, 'index'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.index');
+    Route::get('/admin/costs/create', [CostController::class, 'create'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.create');
 
-Route::get('/admin/costs/create', [CostController::class, 'create'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.create');
+    Route::post('/admin/costs', [CostController::class, 'store'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.store');
 
-Route::post('/admin/costs', [CostController::class, 'store'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.store');
+    Route::get('/admin/costs/{cost}/edit', [CostController::class, 'edit'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.edit');
 
-Route::get('/admin/costs/{cost}/edit', [CostController::class, 'edit'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.edit');
+    Route::put('/admin/costs/{cost}', [CostController::class, 'update'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.update');
 
-Route::put('/admin/costs/{cost}', [CostController::class, 'update'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.update');
+    Route::delete('/admin/costs/{cost}', [CostController::class, 'destroy'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.destroy');
 
-Route::delete('/admin/costs/{cost}', [CostController::class, 'destroy'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.destroy');
+// HERRAMIENTAS
+
+    Route::get('/admin/Herramientas/create', [HerramientaController::class, 'create'])
+    ->middleware(['auth', 'verified', 'role:employee'])
+    ->name('admin.Herramientas.create');
+
+    Route::post('/admin/Herramientas', [HerramientaController::class, 'store'])
+    ->middleware(['auth', 'verified', 'role:employee'])
+    ->name('admin.Herramientas.store');
+
+    Route::get('/admin/Herramientas/{herramienta}/edit', [HerramientaController::class, 'edit'])
+    ->middleware(['auth', 'verified', 'role:employee'])
+    ->name('admin.Herramientas.edit');
+
+    Route::put('/admin/Herramientas/{herramienta}', [HerramientaController::class, 'update'])
+    ->middleware(['auth', 'verified', 'role:employee'])
+    ->name('admin.Herramientas.update');
+
+    Route::delete('/admin/Herramientas/{herramienta}', [HerramientaController::class, 'destroy'])
+    ->middleware(['auth', 'verified', 'role:employee'])
+    ->name('admin.Herramientas.destroy');
+
 
 // AUTENTICACIÓN
 Route::middleware('auth')->group(function () {

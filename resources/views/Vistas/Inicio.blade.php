@@ -94,8 +94,9 @@
                     <div class="col-10">
                         <div class="row ms-1">
                             {{-- CARTAS DE PRODUCTOS EN VENTA --}}
-                 {{-- 1 --}}<div class="col-2">
+                 {{-- 1 --}}<div class="col-3">
                                 <div class="card" style="width: 12rem; height:20rem">
+                                    <h5>Electrodomesticos</h5>
                                     <img src="{{url('/img/electrodomesticos.jpg')}}" height="160rem"  alt="">
                                     <div class="card-body">
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -103,8 +104,9 @@
                                   </div>
                             </div>
 
-                {{-- 2 --}}<div class="col-2">
+                {{-- 2 --}}<div class="col-3">
                                 <div class="card" style="width: 12rem; height:20rem">
+                                    <h5>Electronica</h5>
                                     <img src="{{url('/img/electronica.jpg')}}" height="160rem"  alt="">
                                     <div class="card-body">
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -112,42 +114,18 @@
                                 </div>
                             </div>
 
-                {{-- 3 --}}<div class="col-2">
+                {{-- 3 --}}<div class="col-3">
                                 <div class="card" style="width: 12rem; height:20rem">
+                                    <h5>Herramientas</h5>
                                     <img src="{{url('/img/herramientas.jpg')}}" height="160rem"  alt="">
                                     <div class="card-body">
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                     </div>
                                   </div>
                             </div>
-
-                {{-- 4 --}}<div class="col-2">
-                                <div class="card" style="width: 12rem; height:20rem">
-                                    <img src="{{url('/img/electronica.jpg')}}" height="160rem"  alt="">
-                                    <div class="card-body">
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                  </div>
+                            <div class="col-1">
+                                
                             </div>
-
-                {{-- 5 --}}<div class="col-2">
-                                <div class="card" style="width: 12rem; height:20rem">
-                                    <img src="{{url('/img/Electrodomesticos.jpg')}}" height="160rem"  alt="">
-                                    <div class="card-body">
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                  </div>
-                            </div>
-
-                {{-- 6 --}}<div class="col-2">
-                                <div class="card" style="width: 12rem; height:20rem">
-                                    <img src="{{url('/img/electronica.jpg')}}" height="160rem"  alt="">
-                                    <div class="card-body">
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                     <div class="col-2">
