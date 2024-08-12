@@ -5,6 +5,7 @@ use App\Http\Controllers\HerramientaController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StoreController;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -103,6 +104,35 @@ Route::get('/admin/costs/create', [CostController::class, 'create'])
     ->middleware(['auth', 'verified', 'role:admin'])
     ->name('admin.costs.destroy');
 
+    //Proveedores
+
+    Route::get('/admin/stores', [StoreController::class, 'index'])
+->middleware(['auth', 'verified', 'role:admin'])
+->name('admin.stores.index');
+
+    Route::get('/admin/stores/create', [StoreController::class, 'create'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.stores.create');
+
+    Route::get('pdf_generatore', [StoreController::class, 'pdf_generator_get'])
+->middleware(['auth', 'verified', 'role:admin'])
+->name('admin.stores.pdf_generator_get');
+
+    Route::post('/admin/stores', [StoreController::class, 'store'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.stores.store');
+
+    Route::get('/admin/stores/{store}/edit', [StoreController::class, 'edit'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.stores.edit');
+
+    Route::put('/admin/stores/{store}', [StoreController::class, 'update'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.stores.update');
+
+    Route::delete('/admin/stores/{cost}', [StoreController::class, 'destroy'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.stores.destroy');
 // HERRAMIENTAS
 
     Route::get('/admin/Herramientas/create', [HerramientaController::class, 'create'])

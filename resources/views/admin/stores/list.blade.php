@@ -21,7 +21,7 @@
 
     <div class="row justify-content-center mt-4">
         <div class="col-md-10 d-flex justify-content-end">
-            <a href="{{ route('admin.costs.create') }}" class="btn btn-dark">Create</a>
+            <a href="{{ route('admin.stores.create') }}" class="btn btn-dark">Create</a>
             <a href="{{url('pdf_generatore')}}" class="btn btn-dark ml-2">Generate PDF</a>
         </div>
     </div>
@@ -37,34 +37,35 @@
         <div class="col-md-10">
             <div class="card borde-0 shadow-lg my-4">
             <div class="card-header">
-                <h4 class="text-black">Costos fijos</h4>
+                <h4 class="text-white">Products</h4>
             </div>
             <div class="card-body">
                 <table class="table">
                     <tr>
                         <th>ID</th>
-                        <th></th>
-                        <th>Elemento</th>
-                        <th>Fecha</th>
-                        <th>Precio</th>
-                        <th>Acción</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Action</th>
+
+
                     </tr>
-                    @if ($costs->isNotEmpty())
-                    @foreach ($costs as $cost)
+                    @if ($stores->isNotEmpty())
+                    @foreach ($stores as $store)
                     <tr>
-                        <td>{{ $cost->id }}</td>
+                        <td>{{ $store->id }}</td>
+                        <td>{{ $store->name }}</td>
+                        <td>{{ $store->address }}</td>
+                        <td>{{ $store->phone }}</td>
+                        <td>{{ $store->email }}</td>
+                        <td>{{ $store->type }}</td>
+                        <td>{{ $store->description }}</td>
                         <td>
-                            @if ($cost->image != "")
-                                <img src="{{ asset('uploads/costs/' . $cost->image) }}" alt="" style="width: 100px">
-                                
-                            @endif
-                        </td>
-                        <td>{{$cost->element}}</td>
-                        <td>{{$cost->date}}</td>
-                        <td>{{$cost->price}}</td>
-                        <td>
-                            <a href="{{ route('admin.costs.edit',$cost->id)}}" class="btn btn-dark">Edit</a>
-                            {{--  <form onclick="deleteProduct({{ $product->id }});" method="POST">
+                            <a href="{{ route('admin.stores.edit',$store->id)}}" class="btn btn-dark">Edit</a>
+                           {{--  <form onclick="deleteProduct({{ $product->id }});" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -76,11 +77,12 @@
                                 <button type="button" class="btn btn-danger" onclick="deleteProduct();">Delete</button>
                             </form> --}}
 
-                            <a href="#" onclick="deleteCost({{ $cost->id  }});" class="btn btn-danger">Delete</a>
-                            <form id="delete-cost-from-{{ $cost->id }}" action="{{ route('admin.costs.destroy',$cost->id )}}" method="POST" >
-                            @csrf
-                                @method('DELETE')
-                            </form>
+
+                            <a href="#" onclick="deleteStore({{ $store->id  }});" class="btn btn-danger">Delete</a>
+                                <form id="delete-store-from-{{ $store->id }}" action="{{ route('admin.stores.destroy',$store->id )}}"method="POST" >
+                                @csrf
+                                    @method('DELETE')
+                                </form>
                             
                         </td>
                     </tr>
@@ -113,11 +115,10 @@
 </body>
 </html>
 
-
 <script>
-    function deleteCost(id){
+    function deleteStore(id){
         if (confirm("¿Estas seguro?")){
-            document.getElementById("delete-cost-from-"+id).submit();
+            document.getElementById("delete-store-from-"+id).submit();
         }
     }
 </script>

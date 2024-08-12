@@ -27,8 +27,9 @@
                     @role('admin')
                         <li><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
                         <li><a href="/admin/costs" class="nav-link px-2 text-white">Costos Fijos</a></li>
+                        <li><a href="/admin/stores" class="nav-link px-2 text-white">Proveedores</a></li>
+
                     @endrole
-    
                     @role('employee')
                         <li><a href="/Vistas/Herramientas" class="nav-link px-2 text-white">Herramientas</a></li>
                     @endrole
