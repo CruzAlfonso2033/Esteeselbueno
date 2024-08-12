@@ -41,7 +41,7 @@ class HerramientaController extends Controller
             'caracteristicas' => 'required|string'
         ];
         if($request->fotoHerramienta != ""){
-            $rules['image'] = 'fotoHerramienta';
+            $rules['fotoHerramienta'] = 'fotoHerramienta';
         }
         $validator=Validator::make($request->all(),$rules);
         if($validator->fails()){
@@ -63,7 +63,7 @@ class HerramientaController extends Controller
         $ext = $fotoHerramienta->getClientOriginalExtension();
         $imageName = time().'.'.$ext;
 
-        $fotoHerramienta->move(public_path('uploads/costs'), $imageName);
+        $fotoHerramienta->move(public_path('uploads/herramientas'), $fotoHerramienta);
 
         $herramienta->fotoHerramienta = $imageName;
         $herramienta->save();
@@ -105,8 +105,8 @@ class HerramientaController extends Controller
             'modelo' => 'required|string',
             'caracteristicas' => 'required|string'
         ];
-        if($request->image != ""){
-            $rules['image'] = 'image';
+        if($request->fotoHerramienta != ""){
+            $rules['fotoHerramienta'] = 'fotoHerramienta';
         }
 
         $validator=Validator::make($request->all(),$rules);

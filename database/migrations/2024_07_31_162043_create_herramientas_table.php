@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('elemento', 20)->nullable();
-            $table->string('fotoHerramienta', 20)->nullable();
+            $table->string('fotoHerramienta')->nullable();
             $table->integer('cantidad')->nullable();
             $table->decimal('costo', 6, 2)->nullable();
             $table->string('vidaUtil', 40)->nullable();

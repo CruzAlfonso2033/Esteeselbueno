@@ -9,14 +9,14 @@
     <title>Document</title>
 </head>
 <body id="body">
+
+
     <div>
         @include("components.componentes.header")
     </div>
 
 
-<br>
 
-<br>
     @role('admin')
         <div class="row justify-content-center mt-4">
             <div class="col-md-10 d-flex justify-content-end">
@@ -26,7 +26,7 @@
     @endrole
 <br>
 
-<div class="card text-bg-dark" id="sombras">
+<div class="card " id="sombras">
     <div class="text-center">
         <div class="card-body">
             <div class="row me-2">
@@ -35,11 +35,11 @@
                         <div class="col-2">
                             <div class="card" style="width: 12rem; height:25rem">
                                 <p class="card-title">Reparación</p>
-                                <img src="{{url('/img/Reparacion.jpg')}}" height="400rem">
+                                <img src="{{url('/img/Reparacion.jpg')}}" height="380rem">
                                 <div class="card-body">
                                     
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">ir</a>
+                                    <p class="card-text">Con más de 8 años de experiencia en rearaciones de todo tipo.</p>
+
                                 </div>
                             </div>
                         </div>
@@ -48,48 +48,16 @@
                                 <p class="card-title">Mantenimiento</p>
                                 <img src="{{url('/img/Mantenimiento.jpg')}}" height="400rem">
                                 <div class="card-body">
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">ir</a>
+                                  <p class="card-text">Contamos con garantías para procurar el mantenimiento de nuestras reparaciones</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="card" style="width: 12rem; height:25rem">
                                 <p class="card-title">Instalacion electrica</p>
-                                <img src="{{url('/img/Instalacion.jpg')}}" height="400rem">
+                                <img src="{{url('/img/Instalacion.jpg')}}" height="360rem">
                                 <div class="card-body">
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">ir</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="card" style="width: 12rem; height:25rem">
-                                <p class="card-title">Reparación</p>
-                                <img src="{{url('/img/Reparacion.jpg')}}" height="400rem">
-                                <div class="card-body">
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">ir</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="card" style="width: 12rem; height:25rem">
-                                <p class="card-title">Reparación</p>
-                                <img src="{{url('/img/Reparacion.jpg')}}" height="400rem">
-                                <div class="card-body">
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">ir</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="card" style="width: 12rem; height:25rem">
-                                <p class="card-title">Reparación</p>
-                                <img src="{{url('/img/Reparacion.jpg')}}" height="400rem">
-                                <div class="card-body">
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">ir</a>
+                                  <p class="card-text">Contamos con la mejor experiencia en instalación electrica.</p>
                                 </div>
                               </div>
                         </div>
@@ -125,7 +93,7 @@
 
         {{-- RASTREAR UN SERVICIO --}}
 
-<div class="card text-bg-dark" id="sombras">
+{{-- <div class="card text-bg-dark" id="sombras">
     <div class="card text-bg-dark" id="sombras">
         <div class="card-body">
             <div class="row me-2">
@@ -147,7 +115,7 @@
         </div>
     </div>    
 </div>
-
+ --}}
 <div>
     @include("components.componentes.footer")
 </div>

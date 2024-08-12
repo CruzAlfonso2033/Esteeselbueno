@@ -13,9 +13,9 @@
 <body id="body">
 
     <div>
-        <header  id="sombrasheader">
+        
             @include("components.componentes.header")
-        </header>
+       
        
     </div>
    
@@ -35,39 +35,38 @@
             LAS IMAGENES SON DE TAMAÑO 3000x600 --}}
             <div class="carousel-inner">
                 
-                    <div class="carousel-item active ms-2">
-                        <div class="container">
-                            <div class="carousel-caption text-start">
-                                <h1>Contamos con un equipo de trabajo especializado</h1>
-                                <p class="opacity-75">Somos tu mejor opción!</p>
-                            </div>
-                        </div>
-                        <img src="{{url('/img/Carrusel.jpg')}}" class="d-block w-100" alt="">
-                    </div>
-                    
-    
-    
-                <div class="carousel-item ms-2">
-                    <img src="{{url('/img/Carrusel24.jpg')}}" class="d-block w-100" alt="">
+                <div class="carousel-item active ms-2">
                     <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Con instalaciones especializadas</h1>
-                            <p>En Electric Cool, contamos con las mejores instalaciones para llevar a cabo nuestro trabajo.</p>
+                        <div class="carousel-caption text-start">
+                            <h1>Contamos con un equipo de trabajo especializado</h1>
+                            <p class="opacity-75">Somos tu mejor opción!</p>
                         </div>
+                    </div>
+                    <img src="{{url('/img/Carrusel.jpg')}}" class="d-block w-100" alt="">
+                </div>
+                
+
+
+            <div class="carousel-item ms-2">
+                <img src="{{url('/img/Carrusel24.jpg')}}" class="d-block w-100" alt="">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Con instalaciones especializadas</h1>
+                        <p>En Electric Cool, contamos con las mejores instalaciones para llevar a cabo nuestro trabajo.</p>
                     </div>
                 </div>
-    
-    
-                <div class="carousel-item ms-2">
-                    <img src="{{url('/img/Carrusel89.jpg')}}" class="d-block w-100" alt="">            
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>Hasta la puerta de tu hogar.</h1>
-                            <p>En Electric Cool, no solo ofrecemos servicios de alta calidad en nuestras instalaciones, sino que también llevamos nuestro trabajo hasta la puerta de tu hogar. Nuestro equipo de profesionales está listo para atender tus necesidades de mantenimiento, reparación e instalación de equipos electrónicos y electrodomésticos, directamente en tu domicilio.</p>
-                        </div>
+            </div>
+
+
+           {{--  <div class="carousel-item ms-2">
+                <img src="{{url('/img/Carrusel89.jpg')}}" class="d-block w-100" alt="">            
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Hasta la puerta de tu hogar.</h1>
+                        <p>En Electric Cool, no solo ofrecemos servicios de alta calidad en nuestras instalaciones, sino que también llevamos nuestro trabajo hasta la puerta de tu hogar. Nuestro equipo de profesionales está listo para atender tus necesidades de mantenimiento, reparación e instalación de equipos electrónicos y electrodomésticos, directamente en tu domicilio.</p>
                     </div>
                 </div>
-    
+            </div> --}}
                 {{-- BOTONES DE PREVIO Y SIGUIENTE --}}
     
             </div>
@@ -85,15 +84,15 @@
 <br>
 <br>
 
-    {{-- SECCIÓN DE TIENDA --}}
+ {{--     SECCIÓN DE TIENDA 
     <div class="card mx-4" id="sombras">
         <div class="text-center">
             <div class="card-body">
                 <div class="row me-2">
                     <div class="col-10">
                         <div class="row ms-1">
-                            {{-- CARTAS DE PRODUCTOS EN VENTA --}}
-                 {{-- 1 --}}<div class="col-3">
+                            CARTAS DE PRODUCTOS EN VENTA 
+                  1 <div class="col-3">
                                 <div class="card" style="width: 12rem; height:20rem">
                                     <h5>Electrodomesticos</h5>
                                     <img src="{{url('/img/electrodomesticos.jpg')}}" height="160rem"  alt="">
@@ -103,7 +102,7 @@
                                   </div>
                             </div>
 
-                {{-- 2 --}}<div class="col-3">
+                 2 <div class="col-3">
                                 <div class="card" style="width: 12rem; height:20rem">
                                     <h5>Electronica</h5>
                                     <img src="{{url('/img/electronica.jpg')}}" height="160rem"  alt="">
@@ -113,36 +112,31 @@
                                 </div>
                             </div>
 
-                {{-- 3 --}}<div class="col-3">
+                 3 <div class="col-3">
                                 <div class="card" style="width: 12rem; height:20rem">
                                     <h5>Herramientas</h5>
-                                    <img src="{{url('/img/herramientas.jpg')}}" height="160rem"  alt="">
+                                    <img src="{{url('/img/carrusel1.webp')}}" height="160rem"  alt="">
                                     <div class="card-body">
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                     </div>
                                   </div>
                             </div>
-                            <div class="col-1">
 
-                            </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="card col-2" id="sombras">
                         <div class="text-center mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Tienda</h5>
                                 <p class="card-text">Productos, Promociones y más</p>
-                                <a href="Vistas/Tienda" class="btn btn-primary">ir</a>
+                                <a href="/Tienda" class="btn btn-primary">ir</a>
                             </div>
                         </div>
                     </div> 
                 </div> 
             </div>
         </div>
-    </div>
-
-<br>
-<br>
+    </div> --}}
 
     {{-- SERVICIOS --}}
     <div class="card mx-4" id="sombras">

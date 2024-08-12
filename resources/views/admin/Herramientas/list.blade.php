@@ -36,7 +36,7 @@
         <div class="col-md-10">
             <div class="card borde-0 shadow-lg my-4">
             <div class="card-header">
-                <h4 class="text-white">Costos fijos</h4>
+                <h4 class="text-black">Costos fijos</h4>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -57,7 +57,7 @@
                         <td>{{ $herramienta->id }}</td>
                         <td>
                             @if ($herramienta->fotoHerramienta != "")
-                                <img src="{{ asset('uploads/herramientas/' . $herramienta->fotoHerramienta) }}" alt="" style="width: 100px">
+                                <img src="{{ asset('uploads/herramienta/' . $herramienta->fotoHerramienta) }}" alt="" style="width: 100px">
                                 
                             @endif
                         </td>
@@ -73,7 +73,7 @@
                             
 
                             <a href="#" onclick="deleteHerramienta({{ $herramienta->id  }});" class="btn btn-danger">Delete</a>
-                            <form id="delete-cost-from-{{ $herramienta->id }}" action="{{ route('admin.Herramientas.destroy',$herramienta->id )}}" method="POST" >
+                            <form id="delete-cost-form-{{ $herramienta->id }}" action="{{ route('admin.Herramientas.destroy',$herramienta->id )}}" method="POST" >
                             @csrf
                                 @method('DELETE')
                             </form>
@@ -92,10 +92,11 @@
     </div>
 </div>
 
-
 </div>
         {{-- RASTREAR UN SERVICIO --}}
-
+<br>
+<br>
+<br>
 <div>
     @include("components.componentes.footer")
 </div>
@@ -109,12 +110,12 @@
 </body>
 </html>
 
-
 <script>
     function deleteHerramienta(id){
         if (confirm("¿Estas seguro?")){
-            document.getElementById("delete-Herramienta-from-"+id).submit();
+            document.getElementById("delete-herramienta-from-"+id).submit();
         }
     }
 </script>
+
 

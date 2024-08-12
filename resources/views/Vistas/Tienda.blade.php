@@ -11,8 +11,7 @@
 <body  id="body">
   {{-- HEADER --}}
     <div>
-        @include("components.clients-component.header")
-        @include("components.clients-component.headercategorias")
+        @include("components.componentes.header")
     </div>
 <br>
 
@@ -144,7 +143,7 @@ hr
 
 {{-- FOOTER --}}
 <div>
-    @include("components.clients-component.footer ")
+    @include("components.componentes.footer ")
 </div>
 
 

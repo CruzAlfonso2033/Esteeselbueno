@@ -36,7 +36,6 @@ Route::get('/Vistas/AcercaDeNosotros', function () {
 /* CRUDS */
 
 Route::get('/Vistas/Informes', [ProductController::class, 'index'])
-->middleware(['auth', 'verified', 'role:admin'])
 ->name('Vistas.index');
 
 Route::get('/Vistas/Herramientas', [HerramientaController::class, 'index'])

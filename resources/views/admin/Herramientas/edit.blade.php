@@ -81,7 +81,7 @@
                     <label for="" class="form-label h5">fotoHerramienta</label>
                     <input type="file" class="form-control form-control-lg" placeholder="Price" name="fotoHerramienta">
                     @if ($herramienta->fotoHerramienta != "")
-                        <img class="w-50 my-3" src="{{ asset('uploads/herramientas/' . $herramienta->fotoHerramienta) }}" alt="" style="width: 100px">
+                        <img class="w-50 my-3" src="{{ asset('uploads/herramienta/' . $herramienta->fotoHerramienta) }}" alt="" style="width: 100px">
                     @endif
                 </div>
 

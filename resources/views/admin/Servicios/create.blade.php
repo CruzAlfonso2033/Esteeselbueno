@@ -132,7 +132,7 @@
 </div>
 
 <div>
-    @include("components.clients-component.footer")
+    @include("components.componentes.footer")
 </div>
 
 
