@@ -101,7 +101,7 @@ Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
 
 // Route::post('/admin/Servicios', [ProductController::class,'store'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.store');
 
-Route::post('/admin/Servicios', [ProductController::class, 'store'])
+Route::post('/admin/Servicios.store', [ProductController::class, 'store'])
     ->middleware(['auth', 'verified','role:admin'])
     ->name('admin.Servicios.store');
 
