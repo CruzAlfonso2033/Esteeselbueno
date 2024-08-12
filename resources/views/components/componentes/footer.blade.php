@@ -8,11 +8,11 @@
             <li class="nav-item mb-2"><a href="/AcercaDeNosotros" class="nav-link p-0 text-white">Acerca de nosotros</a></li>
             @role('admin')
                 <li class="nav-item mb-2"><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
-                <li class="nav-item mb-2"><a href="/Vistas/Registros" class="nav-link px-2 text-white">Registros</a></li>
+                <li class="nav-item mb-2"><a href="/admin/costs" class="nav-link px-2 text-white">Costos Fijos</a></li>
             @endrole
 
             @role('employee')
-                <li class="nav-item mb-2"><a href="/Vistas/Registros" class="nav-link px-2 text-white">Registros</a></li>
+                <li class="nav-item mb-2"><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
             @endrole
         </ul>
     </div>

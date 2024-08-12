@@ -16,7 +16,7 @@ Route::get('/profile/edit', function () {
 
 // VISTAS
 
-Route::get('/Vistas/Inicio', function () {
+Route::get('/', function () {
     return view('Vistas.Inicio');
 });
 
@@ -37,7 +37,6 @@ Route::get('/Vistas/AcercaDeNosotros', function () {
 Route::get('/Vistas/Informes', [ProductController::class, 'index'])
 ->middleware(['auth', 'verified', 'role:admin'])
 ->name('Vistas.index');
-
 /*     
 Route::get('/admin/costs', [CostController::class, 'index'])
     ->middleware(['auth', 'verified', 'role:admin'])

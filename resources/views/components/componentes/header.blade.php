@@ -25,14 +25,12 @@
                     <li><a href="/Vistas/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
     
                     @role('admin')
-                    
-                        <li><a href="/Vistas/Registros" class="nav-link px-2 text-white">Registros</a></li>
                         <li><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
                         <li><a href="/admin/costs" class="nav-link px-2 text-white">Costos Fijos</a></li>
                     @endrole
     
                     @role('employee')
-                        <li><a href="/Vistas/Registros" class="nav-link px-2 text-white">Registros</a></li>
+                        <li><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
                     @endrole
                 </ul>      
             </div>
