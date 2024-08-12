@@ -24,11 +24,11 @@
 {{-- Crear un servicio --}}
 
 <div class="container">
-    {{-- <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-4">
         <div>
             <a href="{{ route('admin.Servicios.index') }}" class="btn btn-dark">Back</a>
         </div>
-    </div> --}}
+    </div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-10">
             <div class="card borde-0 shadow-lg my-4">
