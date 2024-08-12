@@ -10,10 +10,9 @@
                 <li class="nav-item mb-2"><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
                 <li class="nav-item mb-2"><a href="/admin/costs" class="nav-link px-2 text-white">Costos Fijos</a></li>
             @endrole
-
             @role('employee')
-                <li class="nav-item mb-2"><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>
-            @endrole
+                <li class="nav-item mb-2"><a href="/Vistas/Herramientas" class="nav-link px-2 text-white">Herramientas</a></li>
+             @endrole
         </ul>
     </div>
 
@@ -37,7 +36,7 @@
     </div>
 
 
-    <div class="col-3 align-items-end border-start">
+    {{-- <div class="col-3 align-items-end border-start">
         <div class="row text-center ">
             <div class="card-body">
                 <h5 class="card-title">Contactanos</h5>
@@ -45,5 +44,5 @@
                 <a href="#" class="btn btn-primary">Contactanos</a>
             </div>
         </div>
-    </div>
+    </div> --}}
 </footer>

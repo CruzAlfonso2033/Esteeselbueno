@@ -23,7 +23,6 @@
                     <li><a href="/Vistas/Servicios" class="nav-link px-2 text-white">Servicio</a></li>
                     <li><a href="/Vistas/Tienda" class="nav-link px-2 text-white">Tienda</a></li>
                     <li><a href="/Vistas/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
-                    <li><a href="/Vistas/AcercaDeNosotros" class="nav-link px-2 text-white">AcercaDeNosotros</a></li>
     
                     @role('admin')
                         <li><a href="/Vistas/Informes" class="nav-link px-2 text-white">Informes</a></li>

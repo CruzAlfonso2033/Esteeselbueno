@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cost;
+//use Barryvdh\DomPDF\PDF;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
+use PDF;
+
 
 class CostController extends Controller
 {
@@ -144,5 +147,16 @@ class CostController extends Controller
         $cost->delete();
         return redirect()->route('admin.costs.index')->with('success', 'Product deleted successfully');
 
+    }
+
+    public function pdf_generator_get(Request $request){
+        $costs = Cost::get();
+        $data = [
+            'title' => 'Este es el resumen de gastos',
+            'date' => date('Y-m-d'),
+            'costs' => $costs
+        ];
+        $pdf = PDF::loadView('admin.costs.myPDF', $data);
+        return $pdf->download('errorsolutioncode.pdf');
     }
 }
