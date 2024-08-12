@@ -16,6 +16,16 @@
 
 <br>
 
+<br>
+    @role('admin')
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-10 d-flex justify-content-end">
+                <a href="{{ route('admin.Servicios.create') }}" class="btn btn-dark">Create</a>
+            </div>
+        </div>
+    @endrole
+<br>
+
 <div class="card text-bg-dark" id="sombras">
     <div class="text-center">
         <div class="card-body">

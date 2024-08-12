@@ -64,7 +64,7 @@ if($request->image != ""){
         $product->price = $request->price;
         $product->save();
 
-        if($request->image !== ""){
+        if($request->image === ""){
             $image = $request->image;
         $ext = $image->getClientOriginalExtension();
         $imageName = time().'.'.$ext;
@@ -77,8 +77,8 @@ if($request->image != ""){
 
         
 
-
         return redirect()->route('admin.Servicios.create')->with('success', 'Product created successfully');
+        /* return redirect()->route('admin.Servicios.create')->with('success', 'Product created successfully'); */
     }
 
     /**
@@ -157,6 +157,8 @@ if($request->image != ""){
     /**
      * Remove the specified resource from storage.
      */
+
+ 
     public function destroy(string $id)
     {
         $product = Product::findOrFail($id);

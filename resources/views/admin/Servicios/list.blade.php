@@ -15,12 +15,6 @@
 
 
 <br>
-
-
-
-    {{-- SOLICITAR UN SERVICIO --}} 
-
-<hr>
 {{-- Crear un servicio --}}
 
 <div class="container">
@@ -81,11 +75,25 @@
                         <td>{{$product->price}}</td>
                         <td>
                             <a href="{{ route('admin.Servicios.edit',$product->id)}}" class="btn btn-dark">Edit</a>
-                            <a href="" onclick="deleteProduct({{ $product->id }});" class="btn btn-danger">Delete</a>
-                            <form id="delete-product-from-{{ $product->id }}" action="{{ route('admin.Servicios.destroy',$product->id )}}" method="POST">
+                           {{--  <form onclick="deleteProduct({{ $product->id }});" method="POST">
                                 @csrf
                                 @method('DELETE')
-                            </form>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form> --}}
+
+                            {{-- <form id="delete-product-form-{{ $product->id }}" action="{{ route('admin.Servicios.destroy', $product->id) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" class="btn btn-danger" onclick="deleteProduct();">Delete</button>
+                            </form> --}}
+
+
+                            <a href="" onclick="deleteProduct();"class="btn btn-danger">Delete
+                                <form id="delete-product-from-{{ $product->id }}" action="{{ route('admin.Servicios.destroy',$product->id )}}"method="POST" >
+                                @csrf
+                                    @method('DELETE')
+                                </form>
+                            </a>
                         </td>
                     </tr>
                     @endforeach
@@ -113,7 +121,7 @@
                 </div>
                 <div class="col-4 text-center">
                     <div class="card px-2 py-2">
-                        <h5 class="card-title">Rastrear un servicio solicitado  </h5>
+                        <h5 class="card-title">Rastrear un servicio solicitado</h5>
                         <p class="card-text">Numero de servicio</p>
                         <label for=""></label>
                         <a href="#" class="btn btn-primary mx-3">Buscar</a>
@@ -132,6 +140,13 @@
 </div>
 
 
+<script>
+    function deleteProduct(id){
+        if (confirm('Are you sure?')){
+            document.getElementById('delete-product-form-'+id);
+        }
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -139,9 +154,3 @@
 </body>
 </html>
 
-<script>
-    function deleteProduct(id){
-        id (confirm('Are you sure?')){
-            document.getElementById('delete-product-from-'+id).submit();
-        }
-    }
