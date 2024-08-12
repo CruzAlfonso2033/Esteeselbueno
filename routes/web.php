@@ -93,7 +93,7 @@ Route::get('/admin/CostosFijos', function () {
 
 // Route::get('/admin/Servicios/create', function () {
 //     return view('admin.Servicios.create');
-// }, [ProductController::class,'create'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.create');
+// }, [ProductController::class,'create'])->middleware(['auth', 'verified','rolegit push REMOTE-NAME LOCAL-BRANCH-NAME:REMOTE-BRANCH-NAME:admin'])->name('admin.Servicios.create');
 
 Route::get('/admin/Servicios/create', [ProductController::class, 'create'])
     ->middleware(['auth', 'verified','role:admin'])
