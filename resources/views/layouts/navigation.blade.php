@@ -17,8 +17,8 @@
                     </x-nav-link>
                 </div>
                 @role('admin')
-                <x-nav-link :href="route('admin.Inicio')" :active="request()->routeIs('admin.Inicio')">
-                    {{ __('Admin') }}
+                <x-nav-link :href="route('Vistas.index')" :active="request()->routeIs('Vistas.Inicio')">
+                    {{ __('Inicio') }}
                 </x-nav-link>
                 @endrole
             </div>

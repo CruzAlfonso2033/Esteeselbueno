@@ -28,7 +28,7 @@
         
     <div class="row justify-content-center mt-4">
         <div class="col-md-10 d-flex justify-content-end">
-            <a href="{{ route('admin.Servicios.index') }}" class="btn btn-dark">Back</a>
+            <a href="{{ route('Vistas.index') }}" class="btn btn-dark">Back</a>
         </div>
     </div>
 
@@ -62,9 +62,9 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Tipo de servicio</label>
                     <select class="form-select form-select-lg" name="category">
-                        <option value="option1">Venta</option>
-                        <option value="option2">Television</option>
-                        <option value="option3">Ventilador</option>
+                        <option value="Venta">Venta</option>
+                        <option value="Television">Television</option>
+                        <option value="Ventilador">Ventilador</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -78,9 +78,9 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Status de servicio</label>
                     <select class="form-select form-select-lg" name="status">
-                        <option value="option1">Recibido</option>
-                        <option value="option2">En revision</option>
-                        <option value="option3">En espera</option>
+                        <option value="Recibido">Recibido</option>
+                        <option value="En revision">En revision</option>
+                        <option value="En espera">En espera</option>
                     </select>
                 </div>
                 <div class="mb-3">
