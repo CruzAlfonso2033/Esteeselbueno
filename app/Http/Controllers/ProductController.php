@@ -64,7 +64,7 @@ if($request->image != ""){
         $product->price = $request->price;
         $product->save();
 
-        if($request->image === ""){
+        if($request->image != ""){
             $image = $request->image;
         $ext = $image->getClientOriginalExtension();
         $imageName = time().'.'.$ext;
