@@ -22,6 +22,7 @@
     <div class="row justify-content-center mt-4">
         <div class="col-md-10 d-flex justify-content-end">
             <a href="{{ route('admin.Herramientas.create') }}" class="btn btn-dark">Create</a>
+            <a href="{{url('pdf_generator')}}" class="btn btn-dark ml-2">Generate PDF</a>
         </div>
     </div>
 
@@ -56,12 +57,12 @@
                     <tr>
                         <td>{{ $herramienta->id }}</td>
                         <td>
-                            @if ($herramienta->fotoHerramienta != "")
-                                <img src="{{ asset('uploads/herramienta/' . $herramienta->fotoHerramienta) }}" alt="" style="width: 100px">
+                            @if ($herramienta->image != "")
+                                <img src="{{ asset('uploads/herramienta/' . $herramienta->image) }}" alt="" style="width: 100px">
                                 
                             @endif
                         </td>
-                        <td>{{$herramienta->element}}</td>
+                        <td>{{$herramienta->elemento}}</td>
                         <td>{{$herramienta->cantidad}}</td>
                         <td>{{$herramienta->costo}}</td>
                         <td>{{$herramienta->vidaUtil}}</td>
@@ -73,7 +74,7 @@
                             
 
                             <a href="#" onclick="deleteHerramienta({{ $herramienta->id  }});" class="btn btn-danger">Delete</a>
-                            <form id="delete-cost-form-{{ $herramienta->id }}" action="{{ route('admin.Herramientas.destroy',$herramienta->id )}}" method="POST" >
+                            <form id="delete-herramienta-from-{{ $herramienta->id }}" action="{{ route('admin.Herramientas.destroy',$herramienta->id )}}" method="POST" >
                             @csrf
                                 @method('DELETE')
                             </form>
@@ -103,13 +104,6 @@
 
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
-</html>
-
 <script>
     function deleteHerramienta(id){
         if (confirm("¿Estas seguro?")){
@@ -117,5 +111,12 @@
         }
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
 
 

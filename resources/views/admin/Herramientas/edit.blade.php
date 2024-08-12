@@ -36,7 +36,7 @@
         <div class="col-md-10">
             <div class="card borde-0 shadow-lg my-4">
             <div class="card-header">
-                <h4>Editar el costo</h4>
+                <h4>Editar herramienta</h4>
             </div>
             <form enctype="multipart/form-data" action="{{route('admin.Herramientas.update',$herramienta->id)}}" method="POST">
                 @method('PUT')
@@ -45,43 +45,43 @@
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">elemento</label>
-                <input type="string" class="form-control form-control-lg"  name="elemento">
+                    <input value="{{ old('elemento',$herramienta->elemento) }}" type="text" class="form-control form-control-lg"  name="elemento">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">cantidad</label>
-                <input type="number" class="form-control form-control-lg" placeholder="Ingrese la cantidad" name="cantidad">
+                    <input value="{{ old('cantidad',$herramienta->cantidad) }}" type="number" class="form-control form-control-lg"  name="cantidad">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">costo</label>
-                <input type="number" class="form-control form-control-lg"  name="costo">
+                    <input value="{{ old('costo',$herramienta->costo) }}" type="number" class="form-control form-control-lg"  name="costo">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">vidaUtil</label>
-                <input type="string" class="form-control form-control-lg" placeholder="Ingrese la cantidad" name="vidaUtil">
+                    <input value="{{ old('vidaUtil',$herramienta->vidaUtil) }}" type="text" class="form-control form-control-lg"  name="vidaUtil">
                 </div>
                 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">marca</label>
-                <input type="string" class="form-control form-control-lg"  name="marca">
+                    <input value="{{ old('marca',$herramienta->marca) }}" type="text" class="form-control form-control-lg"  name="marca">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">modelo</label>
-                <input type="string" class="form-control form-control-lg" placeholder="Ingrese la cantidad" name="modelo">
+                    <input value="{{ old('modelo',$herramienta->modelo) }}" type="text" class="form-control form-control-lg"  name="modelo">
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label>">caracteristicas</label>
-                    <input type="string" class="form-control form-control-lg" placeholder="Ingrese la cantidad" name="caracteristicas">
+                    <input value="{{ old('caracteristicas',$herramienta->caracteristicas) }}" type="text" class="form-control form-control-lg"  name="caracteristicas">
                 </div>
 
                 <div class="mb-3">
-                    <label for="" class="form-label h5">fotoHerramienta</label>
-                    <input type="file" class="form-control form-control-lg" placeholder="Price" name="fotoHerramienta">
-                    @if ($herramienta->fotoHerramienta != "")
-                        <img class="w-50 my-3" src="{{ asset('uploads/herramienta/' . $herramienta->fotoHerramienta) }}" alt="" style="width: 100px">
+                    <label for="" class="form-label h5">image</label>
+                    <input type="file" class="form-control form-control-lg" placeholder="Price" name="image">
+                    @if ($herramienta->image != "")
+                        <img class="w-50 my-3" src="{{ asset('uploads/herramienta/' . $herramienta->image) }}" alt="" style="width: 100px">
                     @endif
                 </div>
 
@@ -97,29 +97,6 @@
 
 </div>
         {{-- RASTREAR UN SERVICIO --}}
-
-<div class="card text-bg-dark" id="sombras">
-    <div class="card text-bg-dark" id="sombras">
-        <div class="card-body">
-            <div class="row me-2">
-                <div class="col-4">  
-
-                </div>
-                <div class="col-4 text-center">
-                    <div class="card px-2 py-2">
-                        <h5 class="card-title">Rastrear un servicio solicitado  </h5>
-                        <p class="card-text">Numero de servicio</p>
-                        <label for=""></label>
-                        <a href="#" class="btn btn-primary mx-3">Buscar</a>
-                    </div>
-                </div>
-                <div class="col-4">  
-
-                </div>    
-            </div>     
-        </div>
-    </div>    
-</div>
 
 <div>
     @include("components.componentes.footer")

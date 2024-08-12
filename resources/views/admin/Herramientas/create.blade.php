@@ -76,8 +76,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="" class="form-label h5">fotoHerramienta</label>
-                    <input type="file" class="form-control form-control-lg" name="fotoHerramienta">
+                    <label for="" class="form-label h5">foto</label>
+                    <input type="file" class="form-control form-control-lg" name="image">
                 </div>
 
                 <div class="d-grid">
