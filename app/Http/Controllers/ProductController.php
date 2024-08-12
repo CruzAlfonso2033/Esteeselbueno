@@ -137,7 +137,7 @@ if($request->image != ""){
         $product->price = $request->price;
         $product->save();
 
-        if($request->image !== ""){
+        if($request->image != ""){
 
             File::delete(public_path('uploads/products/'.$product->image));
 

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cost;
+use PDF;
 use App\Models\Herramienta;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class HerramientaController extends Controller
 {
@@ -40,8 +42,8 @@ class HerramientaController extends Controller
             'modelo' => 'required|string',
             'caracteristicas' => 'required|string'
         ];
-        if($request->fotoHerramienta != ""){
-            $rules['fotoHerramienta'] = 'fotoHerramienta';
+        if($request->image != ""){
+            $rules['image'] = 'image';
         }
         $validator=Validator::make($request->all(),$rules);
         if($validator->fails()){
@@ -58,14 +60,14 @@ class HerramientaController extends Controller
         $herramienta->caracteristicas = $request->caracteristicas;
         $herramienta->save();
 
-        if($request->fotoHerramienta != ""){
-            $fotoHerramienta = $request->fotoHerramienta;
-        $ext = $fotoHerramienta->getClientOriginalExtension();
+        if($request->image != ""){
+            $image = $request->image;
+        $ext = $image->getClientOriginalExtension();
         $imageName = time().'.'.$ext;
 
-        $fotoHerramienta->move(public_path('uploads/herramientas'), $fotoHerramienta);
+        $image->move(public_path('uploads/herramientas'), $imageName);
 
-        $herramienta->fotoHerramienta = $imageName;
+        $herramienta->image = $imageName;
         $herramienta->save();
         }
 
@@ -105,8 +107,8 @@ class HerramientaController extends Controller
             'modelo' => 'required|string',
             'caracteristicas' => 'required|string'
         ];
-        if($request->fotoHerramienta != ""){
-            $rules['fotoHerramienta'] = 'fotoHerramienta';
+        if($request->image != ""){
+            $rules['image'] = 'image';
         }
 
         $validator=Validator::make($request->all(),$rules);
@@ -124,17 +126,17 @@ class HerramientaController extends Controller
         $herramienta->caracteristicas = $request->caracteristicas;
         $herramienta->save();
 
-        if($request->fotoHerramienta != ""){
+        if($request->image != ""){
 
-            File::delete(public_path('uploads/herramienta/'.$herramienta->fotoHerramienta));
+            File::delete(public_path('uploads/herramienta/'.$herramienta->image));
 
-            $fotoHerramienta = $request->fotoHerramienta;
-            $ext = $fotoHerramienta->getClientOriginalExtension();
+            $image = $request->image;
+            $ext = $image->getClientOriginalExtension();
             $imageName = time().'.'.$ext;
 
-            $fotoHerramienta->move(public_path('uploads/herramienta'), $imageName);
+            $image->move(public_path('uploads/herramienta'), $imageName);
 
-            $herramienta->fotoHerramienta = $imageName;
+            $herramienta->image = $imageName;
             $herramienta->save();
         }
 
@@ -148,8 +150,20 @@ class HerramientaController extends Controller
     public function destroy(string $id)
     {
         $herramienta = Herramienta::findOrFail($id);
-        File::delete(public_path('uploads/herramienta/'.$herramienta->fotoHerramienta));
+
+        File::delete(public_path('uploads/herramienta/'.$herramienta->image));
         $herramienta->delete();
         return redirect()->route('Herramientas.index')->with('success', 'Product deleted successfully');
+    }
+
+    public function pdf_generator_get(Request $request){
+        $herramientas = Herramienta::get();
+        $data = [
+            'title' => 'Este es el resumen de las herramientas',
+            'date' => date('Y-m-d'),
+            'herramientas' => $herramientas
+        ];
+        $pdf = PDF::loadView('admin.Herramientas.myPDF', $data);
+        return $pdf->download('errorsolutioncode.pdf');
     }
 }

@@ -87,9 +87,6 @@ Route::get('pdf_generator', [CostController::class, 'pdf_generator_get'])
 ->middleware(['auth', 'verified', 'role:admin'])
 ->name('admin.costs.pdf_generator_get');
 
-Route::get('/admin/costs/create', [CostController::class, 'create'])
-->middleware(['auth', 'verified', 'role:admin'])
-->name('admin.costs.create');
 
     Route::get('/admin/costs/{cost}/edit', [CostController::class, 'edit'])
     ->middleware(['auth', 'verified', 'role:admin'])
@@ -112,6 +109,10 @@ Route::get('/admin/costs/create', [CostController::class, 'create'])
     Route::post('/admin/Herramientas', [HerramientaController::class, 'store'])
     ->middleware(['auth', 'verified', 'role:employee'])
     ->name('admin.Herramientas.store');
+
+    Route::get('pdf_generator', [HerramientaController::class, 'pdf_generator_get'])
+    ->middleware(['auth', 'verified', 'role:employee'])
+    ->name('admin.Herramientas.pdf_generator_get');
 
     Route::get('/admin/Herramientas/{herramienta}/edit', [HerramientaController::class, 'edit'])
     ->middleware(['auth', 'verified', 'role:employee'])
