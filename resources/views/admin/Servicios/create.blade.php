@@ -25,12 +25,14 @@
 
 <div class="container">
     <div class="container">
-        {{-- <div class="row justify-content-center mt-4">
-            <div>
-                <a href="{{ route('admin.Servicios') }}" class="btn btn-dark">Back</a>
-            </div>
-        </div> --}}
-    <div class="row d-flex justify-content-center">
+        
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-10 d-flex justify-content-end">
+            <a href="{{ route('admin.Servicios.store') }}" class="btn btn-dark">Back</a>
+        </div>
+    </div>
+
+        <div class="row d-flex justify-content-center">
         <div class="col-md-10">
             <div class="card borde-0 shadow-lg my-4">
             <div class="card-header">

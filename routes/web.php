@@ -75,7 +75,7 @@ Route::get('/admin/Inicio', function () {
 
 Route::get('/admin/Servicios', [ProductController::class, 'index'])
     ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.servicios.index');
+    ->name('admin.Servicios.index');
 
 
 

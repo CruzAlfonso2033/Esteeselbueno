@@ -112,29 +112,6 @@
 </div>
         {{-- RASTREAR UN SERVICIO --}}
 
-<div class="card text-bg-dark" id="sombras">
-    <div class="card text-bg-dark" id="sombras">
-        <div class="card-body">
-            <div class="row me-2">
-                <div class="col-4">  
-
-                </div>
-                <div class="col-4 text-center">
-                    <div class="card px-2 py-2">
-                        <h5 class="card-title">Rastrear un servicio solicitado</h5>
-                        <p class="card-text">Numero de servicio</p>
-                        <label for=""></label>
-                        <a href="#" class="btn btn-primary mx-3">Buscar</a>
-                    </div>
-                </div>
-                <div class="col-4">  
-
-                </div>    
-            </div>     
-        </div>
-    </div>    
-</div>
-
 <div>
     @include("components.clients-component.footer")
 </div>
