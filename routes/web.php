@@ -13,6 +13,29 @@ Route::get('/profile/edit', function () {
     return view('edit');
 });
 
+// VISTAS
+
+Route::get('/Vistas/Inicio', function () {
+    return view('Vistas.Inicio');
+});
+
+Route::get('/Vistas/Servicios', function () {
+    return view('Vistas.Servicios');
+});
+
+Route::get('/Vistas/Tienda', function () {
+    return view('Vistas.Tienda');
+});
+
+Route::get('/Vistas/AcercaDeNosotros', function () {
+    return view('Vistas.AcercaDeNosotros');
+});
+
+Route::get('/Vistas/Informes', [ProductController::class, 'index'])
+->middleware(['auth', 'verified', 'role:admin'])
+->name('Vistas.index');
+
+
 
 // RUTAS DE LAS PÁGINAS DEL CLIENTE (no debería tener cuenta)
 
@@ -36,29 +59,6 @@ Route::get('/AcercaDeNosotros', function () {
 
 
 // INICIO DE SESION, REGISTRO Y ROLES DE USUARIO HECHOS EN LARAVEL BREEZE
-
-// EMPLEADO
-Route::get('/pagEmpleados/Inicio', function () {
-    return view('pagEmpleados.Inicio');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.inicio');
-
-Route::get('/pagEmpleados/Servicios', function () {
-    return view('pagEmpleados.Servicios');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.Servicios');
-
-
-Route::get('/pagEmpleados/Tienda', function () {
-    return view('pagEmpleados.Tienda');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.Tienda');
-
-
-Route::get('/pagEmpleados/AcercaDeNosotros', function () {
-    return view('pagEmpleados.AcercaDeNosotros');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.AcercaDeNosotros');
-
-
-
-
 // ADMIN
 Route::get('index', function () {
     return view('admin.index');
@@ -73,9 +73,24 @@ Route::get('/admin/Inicio', function () {
 //     return view('admin.Servicios');
 // })->middleware(['auth', 'verified','role:admin'])->name('admin.servicios');
 
+
+
+
+
+
+
+
+
 Route::get('/admin/Servicios', [ProductController::class, 'index'])
     ->middleware(['auth', 'verified', 'role:admin'])
     ->name('admin.Servicios.index');
+
+
+
+
+
+
+
 
 
 
