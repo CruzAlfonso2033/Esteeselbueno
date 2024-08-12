@@ -10,7 +10,7 @@
 </head>
 <body id="body">
     <div>
-        @include("components.admin-component.header")
+        @include("components.componentes.header")
     </div>
 
 

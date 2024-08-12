@@ -69,6 +69,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                
                                 @if ($products->isNotEmpty())
                                     @foreach ($products as $product)
                                         <tr>
@@ -89,11 +90,12 @@
                                             <td>{{ $product->price }}</td>
                                             <td>
                                                 <a href="{{ route('admin.Servicios.edit', $product->id) }}" class="btn btn-dark">Edit</a>
-                                                <a href="#" onclick="deleteProduct({{ $product->id }});" class="btn btn-danger">Delete</a>
-                                                <form id="delete-product-form-{{ $product->id }}" action="{{ route('admin.Servicios.destroy', $product->id) }}" method="POST" style="display: none;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                </form>
+
+                                                <a href="#" onclick="deleteProduct({{ $product->id  }});" class="btn btn-danger">Delete</a>
+                                                    <form id="delete-product-from-{{ $product->id }}" action="{{ route('admin.Servicios.destroy',$product->id )}}"method="POST" >
+                                                        @csrf
+                                                        @method('DELETE')
+                                                    </form>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -106,6 +108,8 @@
         </div>
     </div>
 
+
+{{-- LISTAS DE COSTOS --}}
  
     {{-- FOOTER --}}
 

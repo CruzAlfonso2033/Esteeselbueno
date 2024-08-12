@@ -10,7 +10,7 @@
 </head>
 <body id="body">
     <div>
-        @include("components.admin-component.header")
+        @include("components.componentes.header")
     </div>
 
 
@@ -26,7 +26,7 @@
 <div class="container">
     <div class="row justify-content-center mt-4">
         <div>
-            <a href="{{ route('admin.Servicios.index') }}" class="btn btn-dark">Back</a>
+            <a href="{{ route('Vistas.index') }}" class="btn btn-dark">Back</a>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
