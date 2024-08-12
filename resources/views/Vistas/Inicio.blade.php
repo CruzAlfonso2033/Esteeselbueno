@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('/css/StylePages.css')}}">
-    <title>Document</title>
+    <title>Electric Cool</title>
 </head>
  {{-- HEADER --}}
 
@@ -34,37 +34,36 @@
             {{-- ELEMENTOS DEL CARRUSEL
             LAS IMAGENES SON DE TAMAÑO 3000x600 --}}
             <div class="carousel-inner">
-                <div class="carousel-item active ms-2">
-                    <img src="{{url('/img/carrusel1.webp')}}" height="300" alt=""> 
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                
+                    <div class="carousel-item active ms-2">
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1>Contamos con un equipo de trabajo especializado</h1>
+                                <p class="opacity-75">Somos tu mejor opción!</p>
+                            </div>
                         </div>
+                        <img src="{{url('/img/Carrusel.jpg')}}" class="d-block w-100" alt="">
                     </div>
-                </div>
+                    
     
     
                 <div class="carousel-item ms-2">
-                    <img src="{{url('/img/carrusel2.jpg')}}" height="300" alt="">
+                    <img src="{{url('/img/Carrusel24.jpg')}}" class="d-block w-100" alt="">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            <h1>Con instalaciones especializadas</h1>
+                            <p>En Electric Cool, contamos con las mejores instalaciones para llevar a cabo nuestro trabajo.</p>
                         </div>
                     </div>
                 </div>
     
     
                 <div class="carousel-item ms-2">
-                    <img src="{{url('/img/carrusel3.png')}}" height="300" alt="">            
+                    <img src="{{url('/img/Carrusel89.jpg')}}" class="d-block w-100" alt="">            
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            <h1>Hasta la puerta de tu hogar.</h1>
+                            <p>En Electric Cool, no solo ofrecemos servicios de alta calidad en nuestras instalaciones, sino que también llevamos nuestro trabajo hasta la puerta de tu hogar. Nuestro equipo de profesionales está listo para atender tus necesidades de mantenimiento, reparación e instalación de equipos electrónicos y electrodomésticos, directamente en tu domicilio.</p>
                         </div>
                     </div>
                 </div>
