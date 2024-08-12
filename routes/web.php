@@ -75,6 +75,10 @@ Route::get('/admin/costs', [CostController::class, 'index'])
 ->middleware(['auth', 'verified', 'role:admin'])
 ->name('admin.costs.index');
 
+Route::get('pdf_generator', [CostController::class, 'pdf_generator_get'])
+->middleware(['auth', 'verified', 'role:admin'])
+->name('admin.costs.pdf_generator_get');
+
 Route::get('/admin/costs/create', [CostController::class, 'create'])
 ->middleware(['auth', 'verified', 'role:admin'])
 ->name('admin.costs.create');

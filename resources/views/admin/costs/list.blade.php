@@ -22,6 +22,7 @@
     <div class="row justify-content-center mt-4">
         <div class="col-md-10 d-flex justify-content-end">
             <a href="{{ route('admin.costs.create') }}" class="btn btn-dark">Create</a>
+            <a href="{{url('pdf_generator')}}" class="btn btn-dark ml-2">Generate PDF</a>
         </div>
     </div>
 
@@ -36,17 +37,17 @@
         <div class="col-md-10">
             <div class="card borde-0 shadow-lg my-4">
             <div class="card-header">
-                <h4 class="text-white">Costos fijos</h4>
+                <h4 class="text-black">Costos fijos</h4>
             </div>
             <div class="card-body">
                 <table class="table">
                     <tr>
                         <th>ID</th>
                         <th></th>
-                        <th>Element</th>
-                        <th>Date</th>
-                        <th>Price</th>
-                        <th>Action</th>
+                        <th>Elemento</th>
+                        <th>Fecha</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
                     </tr>
                     @if ($costs->isNotEmpty())
                     @foreach ($costs as $cost)

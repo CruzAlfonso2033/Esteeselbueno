@@ -185,15 +185,7 @@
                                 <h5 class="card-title">CON EXPERIENCIA EN MANTENIMIENTO, REPARACIÓN E INSTALACIÓN</h5>
                                 <hr>
                                 <p class="card-text">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque 
-                                    dolore repellendus cumque maiores atque! Delectus cumque labore tempora dicta, quisquam 
-                                    explicabo! Rerum iusto voluptas quo repellat dolorum, soluta perferendis id?
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque 
-                                    dolore repellendus cumque maiores atque! Delectus cumque labore tempora dicta, quisquam 
-                                    explicabo! Rerum iusto voluptas quo repellat dolorum, soluta perferendis id?
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque 
-                                    dolore repellendus cumque maiores atque! Delectus cumque labore tempora dicta, quisquam 
-                                    explicabo! Rerum iusto voluptas quo repellat dolorum, soluta perferendis id?
+                                    En Electric Cool, contamos con una vasta experiencia en el mantenimiento, reparación e instalación de una amplia gama de equipos electrónicos y electrodomésticos. Nuestro equipo de expertos está capacitado para manejar todo tipo de dispositivos, desde pequeños aparatos domésticos hasta complejos sistemas electrónicos. Nos enorgullecemos de ofrecer un servicio de alta calidad y soluciones eficientes para todas tus necesidades electrónicas.
                                 </p>
                                 <a href="#" class="btn btn-primary">Servicios</a>
                             </div>
