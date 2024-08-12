@@ -1,5 +1,5 @@
 #body{
-    background-color: black;
+    background-color: rgb(32,64,87);
 }
 
 .small {
@@ -7,18 +7,36 @@
 }   
 
 #opacidad {
-    background: #10e7ff;
-    opacity: .5;
-
-    box-shadow: -15px 3px 10px rgba(255, 255, 255, 0.368);
+    background: #777d31;
+    color:rgb(0, 0, 0);
+    box-shadow: 4px 4px 10px rgba(20, 18, 18);
 }
 
 #sombras {
-    box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.368);
+    color:rgb(0, 0, 0);
+    background: rgba(255, 255, 255, .25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 10px 10px 15px rgba(20, 18, 18);
+}
+
+
+#sombrasheader {
+    background-color: rgb(224, 178, 117);
+    box-shadow: -2px 5px 15px rgb(20, 18, 18);
+    
 }
 
 #sombrasizquierda {
-    box-shadow: -15px 3px 10px rgba(255, 255, 255, 0.368);
+
+    color:rgb(0, 0, 0);
+    background: rgba(255, 255, 255, .10);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 4px 4px 10px rgb(20, 18, 18);
+
 }
 
 #redondo{

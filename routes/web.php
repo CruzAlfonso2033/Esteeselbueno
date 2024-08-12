@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CostController;
-use App\Models\Cost;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -14,6 +12,29 @@ Route::get('/dashboard', function () {
 Route::get('/profile/edit', function () {
     return view('edit');
 });
+
+// VISTAS
+
+Route::get('/Vistas/Inicio', function () {
+    return view('Vistas.Inicio');
+});
+
+Route::get('/Vistas/Servicios', function () {
+    return view('Vistas.Servicios');
+});
+
+Route::get('/Vistas/Tienda', function () {
+    return view('Vistas.Tienda');
+});
+
+Route::get('/Vistas/AcercaDeNosotros', function () {
+    return view('Vistas.AcercaDeNosotros');
+});
+
+Route::get('/Vistas/Informes', [ProductController::class, 'index'])
+->middleware(['auth', 'verified', 'role:admin'])
+->name('Vistas.index');
+
 
 
 // RUTAS DE LAS PÁGINAS DEL CLIENTE (no debería tener cuenta)
@@ -38,29 +59,6 @@ Route::get('/AcercaDeNosotros', function () {
 
 
 // INICIO DE SESION, REGISTRO Y ROLES DE USUARIO HECHOS EN LARAVEL BREEZE
-
-// EMPLEADO
-Route::get('/pagEmpleados/Inicio', function () {
-    return view('pagEmpleados.Inicio');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.inicio');
-
-Route::get('/pagEmpleados/Servicios', function () {
-    return view('pagEmpleados.Servicios');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.Servicios');
-
-
-Route::get('/pagEmpleados/Tienda', function () {
-    return view('pagEmpleados.Tienda');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.Tienda');
-
-
-Route::get('/pagEmpleados/AcercaDeNosotros', function () {
-    return view('pagEmpleados.AcercaDeNosotros');
-})->middleware(['auth', 'verified','role:employee'])->name('pagEmpleados.AcercaDeNosotros');
-
-
-
-
 // ADMIN
 Route::get('index', function () {
     return view('admin.index');
@@ -75,9 +73,25 @@ Route::get('/admin/Inicio', function () {
 //     return view('admin.Servicios');
 // })->middleware(['auth', 'verified','role:admin'])->name('admin.servicios');
 
+
+
+
+
+
+
+
+
 Route::get('/admin/Servicios', [ProductController::class, 'index'])
     ->middleware(['auth', 'verified', 'role:admin'])
     ->name('admin.Servicios.index');
+
+
+
+
+
+
+
+
 
 
 Route::get('/admin/Tienda', function () {
@@ -118,30 +132,14 @@ Route::post('/admin/Servicios.store', [ProductController::class, 'store'])
     ->middleware(['auth', 'verified','role:admin'])
     ->name('admin.Servicios.destroy');
 
-//Costos
-Route::get('/admin/costs', [CostController::class, 'index'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.index');
+// Route::post('/admin/Servicios', function () {
+//     return view('admin.Servicios.create');
+// }, [ProductController::class,'index'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.index');
 
-Route::get('/admin/costs/create', [CostController::class, 'create'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.create');
+// Route::post('/admin/Servicios', function () {
+//     return view('admin.Servicios.create');
+// }, [ProductController::class,'store'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.store');
 
-Route::post('/admin/costs', [CostController::class, 'store'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.store');
-
-Route::get('/admin/costs/{cost}/edit', [CostController::class, 'edit'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.edit');
-
-Route::put('/admin/costs/{cost}', [CostController::class, 'update'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.update');
-
-Route::delete('/admin/costs/{cost}', [CostController::class, 'destroy'])
-    ->middleware(['auth', 'verified', 'role:admin'])
-    ->name('admin.costs.destroy');
 
 // AUTENTICACIÓN
 Route::middleware('auth')->group(function () {
@@ -151,3 +149,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
