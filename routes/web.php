@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CostController;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -132,6 +133,31 @@ Route::post('/admin/Servicios.store', [ProductController::class, 'store'])
     ->middleware(['auth', 'verified','role:admin'])
     ->name('admin.Servicios.destroy');
 
+    //Costos
+
+    Route::get('/admin/costs', [CostController::class, 'index'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.index');
+
+Route::get('/admin/costs/create', [CostController::class, 'create'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.create');
+
+Route::post('/admin/costs', [CostController::class, 'store'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.store');
+
+Route::get('/admin/costs/{cost}/edit', [CostController::class, 'edit'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.edit');
+
+Route::put('/admin/costs/{cost}', [CostController::class, 'update'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.update');
+
+Route::delete('/admin/costs/{cost}', [CostController::class, 'destroy'])
+    ->middleware(['auth', 'verified', 'role:admin'])
+    ->name('admin.costs.destroy');
 // Route::post('/admin/Servicios', function () {
 //     return view('admin.Servicios.create');
 // }, [ProductController::class,'index'])->middleware(['auth', 'verified','role:admin'])->name('admin.Servicios.index');
